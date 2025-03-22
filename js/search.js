@@ -1,7 +1,6 @@
 // Global searchConfig
 
 document.addEventListener('DOMContentLoaded', () => {
-
   const input = document.querySelector('.search-input');
   const container = document.querySelector('.search-result-container');
 
@@ -42,13 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!localSearch.isfetched) return;
     const searchText = input.value.trim().toLowerCase();
     const keywords = searchText.split(/[-\s]+/);
+    let resultItems = [];
+
     if (searchText.length > 0) {
       resultItems = localSearch.getResultItems(keywords);
     }
 
     if (keywords.length === 1 && keywords[0] === '') {
       // no input
-      container.innerHTML = `<div class="search-result-message" ></div>`
+      container.innerHTML = `<div class="search-result-message" ></div>`;
     } else if (resultItems.length === 0) {
       // no result
       container.innerHTML = `<div class="search-result-message" >No result found</div>`;
@@ -59,8 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <ul class="search-result-list">${resultItems.map(result => result.item).join('<div class="h-line-secondary"></div>')}
       </ul>`;
     }
-
-  };
+  }
 
   if (searchConfig.trigger == 'auto') {
     // whenever there is input, update search result
@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (event.key === 'Enter') {
         displaySearchResult();
       }
-    })
+    });
   }
+
   window.addEventListener('search:loaded', displaySearchResult);
 });
-  

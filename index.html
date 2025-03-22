@@ -63,7 +63,7 @@
       <div class="site-brand-container">
         <a href="/">
           
-            Frame.
+            Ivan&#39;s Blog
           
         </a>
       </div>
@@ -92,6 +92,10 @@
                    
           
           
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
         </ul>
       </nav>
     </div>
@@ -105,15 +109,15 @@
           <div class="profile">
     <div class="profile-image">
         
-            <img src="/profile_cover.png" alt="featured_image">
+            <img src="/profile_picture.png" alt="featured_image">
           
     </div>
     <div class="post-content profile-content">
         <div class="profile-title">
-            Hi, this is Frame.
+            Hi, this is Ivan speaking.
         </div>
         <div class="profile-body">
-            A minimal, elegant hexo theme.
+            A first year CS major @ Georgia Tech
         </div>
         
             <div class="profile-link">
@@ -122,6 +126,10 @@
         
             <div class="profile-link">
                 <a href="/archives/">Blogs</a> 
+            </div>           
+        
+            <div class="profile-link">
+                <a href="/Resume.pdf">Resume</a> 
             </div>           
         
     </div>
@@ -134,9 +142,10 @@
     <div class="flex-container">
         <div class="footer-text">
             
+                
+                <br>
             
             
-                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
                 
         </div>
     </div>
@@ -144,6 +153,49 @@
 
     </div>
 
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "3",
+        unescape         : "false",
+        trigger          : "auto",
+        preload          : "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (searchConfig.preload) {
+            fetch(searchConfig.path)
+                .then(response => response.json())
+                .then(data => {
+                    window.searchData = data;
+                    window.dispatchEvent(new Event('search:loaded'));
+                });
+        }
+    });
+</script>
     
     
 
