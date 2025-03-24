@@ -14,7 +14,7 @@
 
 
 
-<title>Ivan&#39;s Blog</title>
+<title>Profile | Ivan&#39;s Blog</title>
 
 
 
@@ -79,12 +79,6 @@
           
             
               <li class="menu-item">
-                <a href="/">Home</a>
-              </li> 
-                   
-          
-            
-              <li class="menu-item">
                 <a href="/archives/">Archive</a>
               </li> 
                    
@@ -110,58 +104,56 @@
 
       <div class="main">
         <div class="flex-container">
-          <article id="post">
-
-  
-    <div class="post-head">
-    <div class="post-info">
-        <div class="post-title">
-            
-            
-                *Untitled
-            
-            
-        </div>
+          <div class="profile">
+    <div class="profile-image">
+        
+            <img src="/profile_picture.png" alt="featured_image">
+          
     </div>
-    <div class="h-line-primary"></div>
+    <div class="post-content profile-content">
+        <h1 class="profile-title typing-animation">Hi, this is Ivan speaking.</h1>
+        <p class="profile-body typing-animation">
+            A first year CS major @ Georgia Tech
+        </p>
+        
+            <div class="profile-link">
+                <a href="/Resume2.pdf">
+                    
+                        <i class="fas fa-file"></i>
+                    
+                    Resume
+                </a> 
+            </div>           
+        
+            <div class="profile-link">
+                <a target="_blank" rel="noopener" href="https://github.com/ivanli05">
+                    
+                        <i class="fab fa-github"></i> 
+                    
+                    Github
+                </a> 
+            </div>           
+        
+            <div class="profile-link">
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ivan-li-9220aa29a/">
+                    
+                        <i class="fab fa-linkedin"></i> 
+                    
+                    LinkedIn
+                </a> 
+            </div>           
+        
+            <div class="profile-link">
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/ivanli05/">
+                    
+                        <i class="fab fa-instagram"></i> 
+                    
+                    Instagram
+                </a> 
+            </div>           
+        
+    </div>
 </div>
-    <div class="post-content">
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="<%= url_for('/css/style.css') %>">
-</head>
-<body>
-    <div class="landing-page">
-        <div class="door">
-            <img src="<%= url_for('/images/door-handle.png') %>" alt="Door Handle" class="door-handle" onclick="openDoor()">
-        </div>
-        <!-- Add a new section below the door -->
-        <div class="new-section">
-            <h1>Welcome to My Website</h1>
-            <p>This is a custom landing page.</p>
-        </div>
-    </div>
-    <script>
-        function openDoor() {
-            document.querySelector('.door').classList.add('open');
-            setTimeout(function() {
-                window.location.href = '<%= url_for('/profile') %>';
-            }, 1000); // Adjust the timeout to match the animation duration
-        }
-    </script>
-</body>
-</html>
-</div> 
-
-<script>
-    window.onload = detectors();
-</script>
-  
-</article>
         </div>
       </div>
       
