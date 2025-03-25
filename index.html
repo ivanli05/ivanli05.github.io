@@ -32,6 +32,8 @@
     
     <link rel="stylesheet" href="/css/style.css">
     
+    <link rel="stylesheet" href="/css/landing.css">
+    
 
 
 
@@ -114,25 +116,13 @@
 </head>
 <body>
     <div class="landing-page">
-        <div class="door">
-            <img src="/images/door-handle.png" alt="Door Handle" class="door-handle" onclick="openDoor()">
-        </div>
-        <!-- Add a new section below the door -->
-        <div class="new-section">
-            <h1>Welcome to My Website</h1>
-            <p>This is a custom landing page.</p>
-        </div>
+        <img src="/profile_picture.png" alt="Image Placeholder" class="door" onclick="shrinkImage()">
     </div>
-    <script>
-        function openDoor() {
-            document.querySelector('.door').classList.add('open');
-            setTimeout(function() {
-                window.location.href = '/profile';
-            }, 1000); // Adjust the timeout to match the animation duration
-        }
-    </script>
+    <script src="/js/animation.js"></script>
+    <script src="/js/search.js"></script> <!-- Ensure search.js is included if needed -->
 </body>
 </html>
+
         </div>
       </div>
       

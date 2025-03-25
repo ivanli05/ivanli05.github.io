@@ -1,0 +1,21 @@
+@keyframes shrink {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.5);
+    }
+}
+
+.door {
+    width: 100px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    background-color: #333; /* Example background color */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1s ease-in-out; /* Ensure transition is defined */
+}
+
+.door.shrink {
+    transform: scale(0.5); /* Ensure transform is defined */
+}
