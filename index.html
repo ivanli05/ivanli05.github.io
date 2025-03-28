@@ -121,8 +121,9 @@
 </head>
 <body>
     <script>
-        // Store profile image info in sessionStorage
-        sessionStorage.setItem('profileImage', '/profile_picture.png');
+        if (!sessionStorage.getItem('profileImageState')) {
+            window.location.href = '/profile';
+        }
     </script>
     <div class="landing-page">
         <img src="/profile_picture.png" alt="Image Placeholder" class="door" onclick="Navigate()">
@@ -131,6 +132,7 @@
     <script src="/js/search.js"></script> <!-- Ensure search.js is included if needed -->
 </body>
 </html>
+
 
         </div>
       </div>
