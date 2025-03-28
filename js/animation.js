@@ -1,18 +1,18 @@
-function shrinkAndNavigate() {
-    const imageElement = document.querySelector('.door');
-    if (imageElement) {
-        console.log("shrink and navigate!");
-        imageElement.classList.add('shrink');
+// function shrinkAndNavigate() {
+//     const imageElement = document.querySelector('.door');
+//     if (imageElement) {
+//         console.log("shrink and navigate!");
+//         imageElement.classList.add('shrink');
 
-        imageElement.addEventListener('animationend', () => {
-            console.log("Adding fade-out class to body");
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-                window.location.href = "/profile";
-            }, 900);
-        }, { once: true }); 
-    }
-}
+//         imageElement.addEventListener('animationend', () => {
+//             console.log("Adding fade-out class to body");
+//             document.body.classList.add('fade-out');
+//             setTimeout(() => {
+//                 window.location.href = "/profile";
+//             }, 900);
+//         }, { once: true }); 
+//     }
+// }
 
 function Navigate() {
     const imageElement = document.querySelector('.door');
