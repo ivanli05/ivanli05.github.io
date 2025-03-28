@@ -1,0 +1,24 @@
+body {
+    background-color: #f5deb3; /* Light brown color */
+    color: #333; /* Text color for contrast */
+}
+
+.container {
+    padding: 20px; /* Add some spacing for content */
+}
+
+.menu-item:hover {
+    background-color: #47c8ff; /* Dark background on hover */
+    color: #333; /* White text color on hover */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 2px;
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.menu-item:hover a {
+    color: #333; /* White text color on hover */
+}
+.year-title {
+    color: #333;
+}
+

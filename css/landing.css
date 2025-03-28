@@ -7,15 +7,64 @@
     }
 }
 
-.door {
-    width: 100px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
-    background-color: #333; /* Example background color */
-    position: relative;
+.profile-page .door {
+    width: 220px; 
+    height: 220px; 
+    position: relative; 
+    top: 10%; 
+    left: 10%; 
+    transform: none; 
     overflow: hidden;
-    transition: transform 1s ease-in-out; /* Ensure transition is defined */
+    border-radius: 50% !important;
+    border: 1px solid #333; 
+}
+
+.door {
+    width: 100px; 
+    height: 100px; 
+    /* background-color: #333;  */
+    position: absolute; 
+    top: 40%; 
+    left: 45%; 
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #333;
+    transition: transform 1s ease-in-out; 
+}
+
+.door.clone {
+    position: absolute;
+    z-index: 1000;
+    transition: all 0.8s ease-in-out;
 }
 
 .door.shrink {
-    transform: scale(0.5); /* Ensure transform is defined */
+    animation: shrink 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+body.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+    opacity: 0; /* Ensure initial opacity is 0 */
+    animation: fadeIn 1s forwards; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -566,9 +566,9 @@ input[type="search"]::-webkit-search-results-decoration {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .profile .profile-content {
-  width: 50%;
-  margin: 0 1.5rem 0 0;
-  padding: $padding-m-1;
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
 }
 .profile .profile-content .profile-title {
   margin-top: 0;

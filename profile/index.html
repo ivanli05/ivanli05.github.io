@@ -34,6 +34,8 @@
     
     <link rel="stylesheet" href="/css/landing.css">
     
+    <link rel="stylesheet" href="/css/theme.css">
+    
 
 
 
@@ -74,7 +76,7 @@
         </a>
       </div>
       <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
-        Menu
+        <button class="menu-btn">Menu</button>
       </div>
       <nav class="site-nav">
         <ul class="menu-list">
@@ -106,56 +108,76 @@
 
       <div class="main">
         <div class="flex-container">
-          <div class="profile">
-    <div class="profile-image">
-        
-            <img src="/profile_picture.png" alt="featured_image">
-          
-    </div>
-    <div class="post-content profile-content">
-        <h1 class="profile-title typing-animation">Hi, this is Ivan speaking.</h1>
-        <p class="profile-body typing-animation">
-            A first year CS major @ Georgia Tech
-        </p>
-        
-            <div class="profile-link">
-                <a href="/Resume2.pdf">
-                    
-                        <i class="fas fa-file"></i>
-                    
-                    Resume
-                </a> 
-            </div>           
-        
-            <div class="profile-link">
-                <a target="_blank" rel="noopener" href="https://github.com/ivanli05">
-                    
-                        <i class="fab fa-github"></i> 
-                    
-                    Github
-                </a> 
-            </div>           
-        
-            <div class="profile-link">
-                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ivan-li-9220aa29a/">
-                    
-                        <i class="fab fa-linkedin"></i> 
-                    
-                    LinkedIn
-                </a> 
-            </div>           
-        
-            <div class="profile-link">
-                <a target="_blank" rel="noopener" href="https://www.instagram.com/ivanli05/">
-                    
-                        <i class="fab fa-instagram"></i> 
-                    
-                    Instagram
-                </a> 
-            </div>           
-        
+          <div class="profile-page">
+    <div class="profile">
+        <div class="profile-image">
+            
+                <img src="/profile_picture.png" alt="featured_image" class="door">
+              
+        </div>
+        <div class="post-content profile-content">
+            <h1 class="profile-title typing-animation">Hi, this is Ivan speaking.</h1>
+            <p class="profile-body typing-animation">
+                A first year CS major @ Georgia Tech
+            </p>
+            
+                <div class="profile-link">
+                    <a href="/Resume2.pdf">
+                        
+                            <i class="fas fa-file"></i>
+                        
+                        Resume
+                    </a> 
+                </div>           
+            
+                <div class="profile-link">
+                    <a target="_blank" rel="noopener" href="https://github.com/ivanli05">
+                        
+                            <i class="fab fa-github"></i> 
+                        
+                        Github
+                    </a> 
+                </div>           
+            
+                <div class="profile-link">
+                    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ivan-li-9220aa29a/">
+                        
+                            <i class="fab fa-linkedin"></i> 
+                        
+                        LinkedIn
+                    </a> 
+                </div>           
+            
+                <div class="profile-link">
+                    <a target="_blank" rel="noopener" href="https://www.instagram.com/ivanli05/">
+                        
+                            <i class="fab fa-instagram"></i> 
+                        
+                        Instagram
+                    </a> 
+                </div>           
+            
+        </div>
     </div>
 </div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const profileImage = document.querySelector('.door');
+        if (profileImage) {
+            // Get the position and size of the image
+            const rect = profileImage.getBoundingClientRect();
+            const profileImageState = {
+                top: rect.top,
+                left: rect.left,
+                width: rect.width,
+                height: rect.height,
+            };
+
+            // Store the state in sessionStorage
+            sessionStorage.setItem("profileImageState", JSON.stringify(profileImageState));
+        }
+    });
+</script>
         </div>
       </div>
       
