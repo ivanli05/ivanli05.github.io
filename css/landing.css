@@ -17,6 +17,19 @@
     overflow: hidden;
     border-radius: 50% !important;
     border: 1px solid #333; 
+    animation: none; /* Stop blinking animation */
+}
+
+@keyframes blinkBorder {
+    0% {
+        border-color: #333;
+    }
+    50% {
+        border-color: #051285;
+    }
+    100% {
+        border-color: #333;
+    }
 }
 
 .door {
@@ -28,8 +41,9 @@
     left: 45%; 
     overflow: hidden;
     border-radius: 50%;
-    border: 1px solid #333;
+    border: 4px solid #333;
     transition: transform 1s ease-in-out; 
+    animation: blinkBorder 1.5s infinite;
 }
 
 .door.clone {
@@ -52,7 +66,7 @@
 }
 
 body.fade-out {
-    animation: fadeOut 0.5s forwards;
+    animation: fadeOut 0.2s forwards;
 }
 
 .fade-in {
@@ -68,3 +82,30 @@ body.fade-out {
         opacity: 1;
     }
 }
+
+.punchline {
+    margin-top: 20px; /* Add spacing between the photo and the punchline */
+    text-align: center;
+    font-size: 1.2em;
+    color: #000000;
+    font-weight: bold;
+    position: relative; /* Ensure it stays beneath the photo */
+}
+
+.greeting {
+    position: absolute;
+    font-size: 1.2em;
+    font-style: italic;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.greeting:nth-child(1) { top: 10%; left: 20%; }
+.greeting:nth-child(2) { top: 30%; left: 50%; }
+.greeting:nth-child(3) { top: 50%; left: 60%; }
+.greeting:nth-child(4) { top: 70%; left: 30%; }
+.greeting:nth-child(5) { top: 90%; left: 60%; }
+.greeting:nth-child(6) { top: 15%; left: 70%; }
+.greeting:nth-child(7) { top: 25%; left: 10%; }
+.greeting:nth-child(8) { top: 60%; left: 50%; }
+.greeting:nth-child(9) { top: 75%; left: 75%; }
+.greeting:nth-child(10) { top: 85%; left: 15%; }

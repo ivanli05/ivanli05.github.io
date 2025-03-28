@@ -48,7 +48,11 @@ function Navigate() {
 
         // Navigate to the /profile page after the animation
         imageElement.addEventListener("transitionend", () => {
-                window.location.href = "/profile";
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = "/profile";
+                }, 200);
+                // window.location.href = "/profile";
         }, { once: true });
     } else {
         console.error("Image element not found");

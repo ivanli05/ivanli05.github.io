@@ -71,7 +71,7 @@
       <div class="site-brand-container">
         <a href="/">
           
-            Ivan&#39;s Blog
+            About Me
           
         </a>
       </div>
@@ -126,8 +126,33 @@
         }
     </script>
     <div class="landing-page">
-        <img src="/profile_picture.png" alt="Image Placeholder" class="door" onclick="Navigate()">
+        <div class="content-container" style="text-align: center;">
+            <img src="/profile_picture.png" alt="Image Placeholder" class="door" onclick="Navigate()">
+            <div class="punchline">Coming from a foreign language high school in Shanghai, I use languages to debug the world.</div>
+            <div id="greetings-container"></div>
+        </div>
     </div>
+    <script>
+        const greetings = [
+            "Hello", "Hola", "你好", "こんにちは", "Bonjour", 
+            "System.out.println('Hello World')", "안녕하세요", 
+            'cout << "Hello" << endl', 'console.log("Hello")'
+        ];
+        const colors = [
+            "#FF5733", "#33FF57", "#3357FF", "#FF33A1", "#FFC300", 
+            "#DAA520", "#C70039", "#900C3F", "#581845", "#1ABC9C", 
+            "#2E8B57", "#8B0000", "#4B0082", "#4682B4", "#6A5ACD"
+        ];
+        const container = document.getElementById('greetings-container');
+
+        greetings.forEach((greeting, index) => {
+            const div = document.createElement('div');
+            div.className = 'greeting';
+            div.textContent = greeting;
+            div.style.color = colors[Math.floor(Math.random() * colors.length)]; // Random dark color
+            container.appendChild(div);
+        });
+    </script>
     <script src="/js/animation.js"></script>
     <script src="/js/search.js"></script> <!-- Ensure search.js is included if needed -->
 </body>
