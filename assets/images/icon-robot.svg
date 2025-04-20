@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Base of the robotic arm -->
+  <rect x="80" y="150" width="40" height="20" fill="#4CAF50" />
+
+  <!-- Vertical arm -->
+  <rect x="95" y="80" width="10" height="70" fill="#2196F3" />
+
+  <!-- Rotating joint -->
+  <circle cx="100" cy="80" r="10" fill="#FFC107" />
+
+  <!-- Upper arm -->
+  <rect x="100" y="50" width="50" height="10" fill="#2196F3" transform="rotate(-30 100 80)" />
+
+  <!-- Gripper joint -->
+  <circle cx="145" cy="45" r="8" fill="#FFC107" />
+
+  <!-- Gripper fingers -->
+  <rect x="145" y="35" width="5" height="15" fill="#F44336" transform="rotate(-30 145 45)" />
+  <rect x="145" y="35" width="5" height="15" fill="#F44336" transform="rotate(30 145 45)" />
+</svg>
