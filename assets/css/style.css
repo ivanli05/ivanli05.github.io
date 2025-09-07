@@ -285,6 +285,11 @@ article.active {
   animation-delay: 0.7s;
 }
 
+.background-animation span:nth-child(9) {
+  color: #00a3c4;
+  animation-delay: 0.8s;
+}
+
 /* Animation for the spans */
 @keyframes move {
   0%, 100% {
@@ -587,6 +592,30 @@ main {
 }
 
 .about-text p { margin-bottom: 15px; }
+
+/* Typing Animation */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: var(--orange-yellow-crayola);
+  animation: blink 1s infinite;
+  vertical-align: text-top;
+  margin-left: 2px;
+}
+
+.typing-cursor.hidden {
+  opacity: 0;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.typed-text {
+  display: inline;
+}
 
 
 
